@@ -18,4 +18,11 @@ private_api = nicehash.private_api(host, organisation_id, key, secret)
 
 unpaid = private_api.get_unpaid()
 
-print(unpaid['data'])
+strdata = str(unpaid['data'])
+listdata = strdata.split(",")
+
+maybe = float(listdata[2])
+almost = format(float(maybe), '.8f')
+working = decimal.Decimal(almost)
+final = working * 100000000
+print(int(final), "Satoshi")
