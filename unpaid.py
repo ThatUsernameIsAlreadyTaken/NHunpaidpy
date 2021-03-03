@@ -24,5 +24,5 @@ print(resp.text)
 strdata = str(unpaid['data'])
 listdata = strdata.split(",")
 print(listdata[2])
-maybe = float(listdata[2]
+maybe = float(listdata[2])
 print('{:.10f}%'.format(maybe)
