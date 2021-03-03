@@ -19,3 +19,7 @@ private_api = nicehash.private_api(host, organisation_id, key, secret)
 unpaid = private_api.get_unpaid()
 
 print(unpaid['data'])
+
+strdata = str(unpaid['data'])
+listdata = strdata.split(",")
+print(listdata[2])
